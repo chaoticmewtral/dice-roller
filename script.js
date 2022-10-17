@@ -7,8 +7,6 @@ const dice = document.querySelectorAll('button');
 const dieRolled = document.querySelector('#die-rolled');
 const result = document.querySelector('#result');
 
-
-
 // event listeners
 dice.forEach(die => die.addEventListener('click', () => rollTheDice(die.textContent)));
 
@@ -17,18 +15,12 @@ function rollTheDice(e) {
     dNum = e;
     let num = parseInt(e.slice(1));
     dResult = Math.ceil(Math.random() * num);
-    showDieRolled();
-    showResult();
+    let msg = `You rolled a ${dResult} on a ${dNum}.`
+    showResult(msg);
 }
 
-function showDieRolled() {
-    const txtDie = document.createElement('p');
-    txtDie.textContent = dNum;
-    dieRolled.appendChild(txtDie);
-}
-
-function showResult() {
+function showResult(e) {
     const txtRes = document.createElement('p');
-    txtRes.textContent = dResult;
+    txtRes.textContent = e;
     result.appendChild(txtRes);
 }
