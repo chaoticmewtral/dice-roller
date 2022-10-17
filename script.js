@@ -10,5 +10,9 @@ dice.forEach(die => die.addEventListener('click', () => rollTheDice(die.textCont
 function rollTheDice(e) {
     num = parseInt(e.slice(1));
     roll = Math.ceil(Math.random() * num);
-    console.log(`${e}: ${roll}`);
+    showResult(`${e}: ${roll}`);
+}
+
+function showResult(e) {
+    console.log(e);
 }
