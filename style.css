@@ -1,5 +1,7 @@
 * {
     text-align: center;
+    color: whitesmoke;
+    background-color: black;
 }
 
 #dice {
@@ -12,17 +14,20 @@
 
 .dice {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     gap: 15px;
 }
 
+img {
+    width: 70px;
+}
+
 .dice button {
-    /* width: 50px; */
-    /* height: 50px; */
-    background-image: url('images/d20.PNG');
+    width: 50px;
+    height: 50px;
     background-size: 50px;
-    /* background-color: blueviolet; */
+    background-color: blueviolet;
     color: whitesmoke;
     flex: 1;
 }
@@ -40,4 +45,11 @@
 #result {
     display: flex;
     flex-direction: column-reverse;
+}
+
+#result :last-child {
+    border: 2px outset blueviolet;
+    width: 200px;
+    align-self: center;
+    padding: 5px;
 }

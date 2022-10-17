@@ -15,7 +15,7 @@ function rollTheDice(e) {
     dNum = e;
     let num = parseInt(e.slice(1));
     dResult = Math.ceil(Math.random() * num);
-    let msg = `You rolled a ${dResult} on a ${dNum}.`
+    let msg = `You rolled ${dResult} on a ${dNum}.`
     showResult(msg);
 }
 
