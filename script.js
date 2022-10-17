@@ -8,5 +8,7 @@ dice.forEach(die => die.addEventListener('click', () => rollTheDice(die.textCont
 
 // functions
 function rollTheDice(e) {
-console.log(e);
+    num = parseInt(e.slice(1));
+    roll = Math.ceil(Math.random() * num);
+    console.log(`${e}: ${roll}`);
 }
